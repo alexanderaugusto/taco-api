@@ -3,18 +3,14 @@
   "name": "taco-api",
   "builds": [
     {
-      "src": "src/index.js",
+      "src": "src",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/src/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/src/routes/food.js"
+      "dest": "/src"
     }
   ]
 }

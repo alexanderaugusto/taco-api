@@ -11,6 +11,10 @@
     {
       "src": "/(.*)",
       "dest": "/src/index.js"
+    },
+    {
+      "src": "/api/v1/food",
+      "dest": "/src/routes/food.js"
     }
   ]
 }

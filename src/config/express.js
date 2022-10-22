@@ -1,14 +1,19 @@
 const express = require('express');
-const consign = require('consign');
 const { join } = require('path');
 const cors = require('cors');
+
+const categoryRoutes = require('../routes/category');
+const foodRoutes = require('../routes/food');
+const documentationRoutes = require('../routes/documentation');
 
 module.exports = function app() {
   const expressApp = express();
 
   expressApp.use(cors());
-  consign({ cwd: 'src/' }).include('routes').into(expressApp);
   expressApp.use(express.static(join(__dirname, '../../docs/')));
+  categoryRoutes(expressApp);
+  foodRoutes(expressApp);
+  documentationRoutes(expressApp);
 
   return expressApp;
 };

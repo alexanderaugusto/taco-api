@@ -2,7 +2,7 @@ const FoodController = require('../controllers/FoodController');
 const { isValidId } = require('../helpers/id.helper');
 const { API_ROUTE } = require('../config/api');
 
-module.exports = app => {
+module.exports = (app) => {
   /**
    * @api {get} /food Request all available food
    * @apiName GetFoodList
@@ -14,7 +14,7 @@ module.exports = app => {
    * 
  
    */
-  app.get(`/food`, (_, res) =>
+  app.get(`${API_ROUTE}/food`, (_, res) =>
     res.json(FoodController.getFoodList())
   );
 

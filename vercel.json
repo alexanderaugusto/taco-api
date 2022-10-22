@@ -3,7 +3,7 @@
   "name": "taco-api",
   "builds": [
     {
-      "src": "src",
+      "src": "src/index.js",
       "use": "@vercel/node"
     }
   ],

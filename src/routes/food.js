@@ -14,7 +14,7 @@ module.exports = app => {
    * 
  
    */
-  app.get(`${API_ROUTE}/food`, (_, res) =>
+  app.get(`/food`, (_, res) =>
     res.json(FoodController.getFoodList())
   );
 

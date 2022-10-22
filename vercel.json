@@ -13,7 +13,7 @@
       "dest": "/src/index.js"
     },
     {
-      "src": "/api/v1/food",
+      "src": "/(.*)",
       "dest": "/src/routes/food.js"
     }
   ]
